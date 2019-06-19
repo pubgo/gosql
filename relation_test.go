@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ilibs/gosql/example/models"
+	"github.com/pubgo/gosql/example/models"
 )
 
 
