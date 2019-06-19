@@ -65,6 +65,10 @@ func Connect(configs map[string]*Config) (err error) {
 			logger.SetLogging(true)
 		}
 
+		if err := sess.Ping(); err != nil {
+			panic(err.Error())
+		}
+
 		sess.SetMaxOpenConns(conf.MaxOpenConns)
 		sess.SetMaxIdleConns(conf.MaxIdleConns)
 		if conf.MaxLifetime > 0 {
